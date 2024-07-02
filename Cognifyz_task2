@@ -1,0 +1,110 @@
+ A basic webpage that is converted into a responsive design using CSS media queries.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>My Responsive Webpage</h1>
+    </header>
+    <nav class="nav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main class="main">
+        <section class="content">
+            <h2>Welcome</h2>
+            <p>This is a simple responsive webpage example using CSS media queries.</p>
+        </section>
+        <aside class="sidebar">
+            <h3>Sidebar</h3>
+            <p>Additional content can go here.</p>
+        </aside>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 My Responsive Webpage</p>
+    </footer>
+</body>
+</html>
+CSS (styles.css)
+/* Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header, .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.nav {
+    background-color: #444;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul li {
+    display: inline;
+    margin: 0 1em;
+}
+
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em;
+}
+
+.content {
+    flex: 3;
+    padding: 1em;
+}
+
+.sidebar {
+    flex: 1;
+    padding: 1em;
+    background-color: #f4f4f4;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .nav ul li {
+        display: block;
+        margin: 0.5em 0;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+}
